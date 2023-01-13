@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000')">
+<center>
+<form action="masterregdata" method="post">
+    {% csrf_token %}
+    <h2 align="center">Master Registration</h2>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><input type="text" name="txtname"></td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>:</td>
+            <td><input type="text" name="txtmbl"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td><input type="email" name="txtemail"></td>
+        </tr><tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="txtpwd"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="sub" value="REGISTER"></td>
+        </tr>
+    </table>
+</form>
+</center>
+</body>
+</html>

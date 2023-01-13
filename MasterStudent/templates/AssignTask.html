@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url('https://wallpaperaccess.com/full/731628.jpg')">
+<center>
+<form action="taskread" method="post">
+    {% csrf_token %}
+    <h2>Assign Task</h2>
+    <table>
+        <tr>
+            <td>Left</td>
+            <td>:</td>
+            <td><select name="ddlleft">
+                <option>Select</option>
+                <option>zero</option>
+                <option> one</option>
+                <option> two</option>
+                <option> three</option>
+                <option> four</option>
+                <option> five</option>
+                <option> six</option>
+                <option> seven</option>
+                <option> eight</option>
+                <option> Nine</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Operation</td>
+            <td>:</td>
+            <td><select name="ddloper">
+                <option>Select</option>
+                <option> plus</option>
+    <option> minus</option>
+    <option> times</option>
+    <option> divided_by</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Right</td>
+            <td>:</td>
+            <td><select name="ddlright">
+                <option>Select</option>
+                <option> zero</option>
+                <option >one</option>
+                <option >two</option>
+                <option >three</option>
+                <option >four</option>
+                <option >five</option>
+                <option >six</option>
+                <option >seven</option>
+                <option >eight</option>
+                <option >Nine</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Students</td>
+            <td>:</td>
+            <td><select name="ddlstudent">
+                {% for i in data %}
+                <option>{{ i.Student_Name }}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>:</td><td>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><input type="submit" name="sub" value="Create Task"></td>
+        </tr>
+    </table>
+</form>
+</center>
+</body>
+</html>

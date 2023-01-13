@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+.background {
+  background-image: url("https://c1.wallpaperflare.com/preview/940/205/257/spring-background-flower-purple.jpg");
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+
+}
+</style>
+<center>
+<body class="background" >
+<h2>Display task here</h2>
+<table border="2">
+    <tr>
+        <th>Left</th>
+        <th>Operation</th>
+        <th>Right</th>
+        <th>Student Name</th>
+        <th></th>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td>{{i.Left}}</td>
+        <td>{{i.Operation}}</td>
+        <td>{{i.Right}}</td>
+        <td>{{i.Students}}</td>
+        <td><a href="{% url 'solve' i.id %}">Solve</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<h3>{{sol}}</h3>
+</center>
+</body>
+</html>
